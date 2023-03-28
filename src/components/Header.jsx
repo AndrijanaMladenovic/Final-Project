@@ -1,7 +1,7 @@
 // import { Link } from "react-router-dom"
 
 export const Header = () => {
-    return <nav className="navbar navbar-expand navbar-dark bg-primary d-flex justify-content-around">
+    return <nav className="navbar navbar-expand navbar-dark bg-primary d-flex justify-content-around p-3">
         <div className="navbar-nav mr-auto">
             <a href="#" className="text-light mainText">Interviews Reports</a>
             {/* <Link className="text-light mainText to='#' className="nav-Link">
