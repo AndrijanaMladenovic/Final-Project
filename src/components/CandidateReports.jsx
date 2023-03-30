@@ -5,6 +5,7 @@ import moment from "moment";
 import { useParams } from "react-router";
 import Container from "react-bootstrap/Container";
 import { getCandidateReport } from "./data/data";
+import "./reports.css";
 
 export default function CandidateReports() {
   const { id } = useParams();
@@ -43,5 +44,7 @@ export default function CandidateReports() {
         </Container>
       </>
     );
+  } else {
+    return "";
   }
 }
