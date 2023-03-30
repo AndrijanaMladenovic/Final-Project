@@ -1,9 +1,10 @@
-import './App.css';
-import { Header } from './components/Header';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Footer } from './components/Footer';
-import Main from './components/Main';
-import { Routes, Route, BrowserRouter } from 'react-router-dom'
+import "./App.css";
+import { Header } from "./components/Header";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Footer } from "./components/Footer";
+import Main from "./components/Main";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import CandidateReports from "./components/CandidateReports";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route element={<Main />} path="/">
+          <Route path="/" element={<Main />}>
+            <Route path="/:id" element={<CandidateReports />} />
           </Route>
         </Routes>
         <Footer />
