@@ -1,7 +1,6 @@
 import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
 
-
 const CardComponent = ({ data }) => {
   let navigate = useNavigate();
 
