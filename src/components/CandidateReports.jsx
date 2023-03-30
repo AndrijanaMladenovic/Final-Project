@@ -5,18 +5,17 @@ import moment from "moment";
 import axios from "axios";
 import { useParams } from "react-router";
 import Container from "react-bootstrap/Container";
+import "./reports.css";
+import { getCandidateReport } from "./data/data";
 
 export default function CandidateReports() {
   const { id } = useParams();
   const [items, setItems] = useState();
-  const url = `http://localhost:3333/api/candidates/${id}`;
-  useEffect(() => {
-    const reports = async () => {
-      const res = await axios.get(url);
-      setItems(res.data);
-    };
-    reports();
-  }, [url]);
+
+  useEffect(async () => {
+    const data = await getCandidateReport(id);
+    setItems(data);
+  }, [id]);
 
   if (items) {
     return (

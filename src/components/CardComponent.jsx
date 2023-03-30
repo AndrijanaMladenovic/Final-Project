@@ -1,8 +1,9 @@
 import Card from "react-bootstrap/Card";
 import { useNavigate } from "react-router-dom";
 
+
 const CardComponent = ({ data }) => {
-    let navigate = useNavigate();
+  let navigate = useNavigate();
 
     return (
         <main className="container-fluid justify-content-center text-center d-flex flex-wrap pt-2">
