@@ -1,7 +1,8 @@
 import Card from "react-bootstrap/Card";
+import { useNavigate } from "react-router-dom";
 
 const CardComponent = () => {
-  // let navigate = useNavigate();
+  let navigate = useNavigate();
 
   return (
     <main className="container-fluid justify-content-center text-center d-flex flex-wrap pt-2">
@@ -11,7 +12,9 @@ const CardComponent = () => {
         <Card.Img
           className="pe-4 ps-4 pt-4"
           variant="top"
-          // onClick={()=>{navigate(`/${item.id}`)}}
+          onClick={() => {
+            navigate(`/${item.id}`);
+          }}
         />
         <Card.Body>
           <Card.Title className="">name</Card.Title>
