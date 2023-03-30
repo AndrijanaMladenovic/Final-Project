@@ -2,10 +2,8 @@ import React from "react";
 import { useEffect, useState } from "react";
 import Image from "react-bootstrap/Image";
 import moment from "moment";
-import axios from "axios";
 import { useParams } from "react-router";
 import Container from "react-bootstrap/Container";
-import "./reports.css";
 import { getCandidateReport } from "./data/data";
 
 export default function CandidateReports() {
