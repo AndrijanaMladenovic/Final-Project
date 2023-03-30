@@ -1,10 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
-
-export default function CandidateReports() {
-  const { id } = useParams();
-  return <div>CandidateReports</div>;
-=======
 import { useEffect, useState } from "react";
 import Image from "react-bootstrap/Image";
 import moment from "moment";
@@ -54,5 +48,4 @@ export default function CandidateReports() {
       </>
     );
   }
->>>>>>> d703feefa87135e1fc25696732e44ccd2079a406
 }
