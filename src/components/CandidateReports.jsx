@@ -5,7 +5,6 @@ import moment from "moment";
 import axios from "axios";
 import { useParams } from "react-router";
 import Container from "react-bootstrap/Container";
-import "./reports.css";
 
 export default function CandidateReports() {
   const { id } = useParams();
