@@ -5,8 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 
+
 const CardComponent = ({ data }) => {
   let navigate = useNavigate();
+  
   const [query, setQuery] = useState("");
   const filteredItems = data.filter((item) => {
     return item.name.toLowerCase().includes(query.toLowerCase());
@@ -27,11 +29,14 @@ const CardComponent = ({ data }) => {
             onChange={(e) => {
               setQuery(e.target.value)}}
             className="form-control border-start-0 border rounded-0"
-            placeholder="Search users"
+            placeholder= "Search Users"
             aria-label="Search"
             aria-describedby="search-addon"
+           
+            
             
           />
+          
         </div>
       </div>
 
