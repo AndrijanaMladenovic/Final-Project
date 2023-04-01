@@ -11,9 +11,13 @@ export default function CandidateReports() {
   const { id } = useParams();
   const [items, setItems] = useState();
 
-  useEffect(async () => {
+  const getData = async () => {
     const data = await getCandidateReport(id);
     setItems(data);
+  };
+
+  useEffect(() => {
+    getData();
   }, [id]);
 
   if (items) {
