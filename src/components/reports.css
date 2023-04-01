@@ -4,11 +4,14 @@
   align-items: center;
   justify-content: space-around;
 }
-p{
-  font-size: 1.6rem;
+.p-candidates{
+  font-size: 1.4rem;
 }
+
 
 span{
   font-size: 1.8rem;
   color: rgb(180, 178, 178);
 }
+
+
