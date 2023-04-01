@@ -34,27 +34,28 @@ export default function Modals() {
   ) => {
     setModalContent(
       <>
-        <h1 className="name_candidate">{candidateName}</h1>
-        <div className="popUp_container">
-          <div>
+        <h3 className="name_candidate pb-2">{candidateName}</h3>
+        <hr style={{ margin: "0 auto" }} />
+        <div className="popUp_container pt-2">
+          <div style={{ width: "200px" }}>
             <span>Company</span>
-            <h1>{companyName}</h1>
-            <span>Interviw date</span>
-            <h1>{interviewDate}</h1>
+            <h4>{companyName}</h4>
+            <span>Interview Date</span>
+            <h4>{interviewDate}</h4>
             <span>Phase</span>
-            <h2>{phase}</h2>
+            <h4>{phase}</h4>
             <span>Status</span>
-            <h2>{status}</h2>
+            <h4>{status}</h4>
           </div>
-          <div>
-            <h2>{note}</h2>
+          <div style={{ marginLeft: "20%" }}>
+            <span>Notes</span>
+            <p>{note}</p>
           </div>
         </div>
       </>
     );
     setModalIsOpen(true);
   };
-  console.log(items);
 
   if (items) {
     return (
@@ -77,11 +78,11 @@ export default function Modals() {
                   <tr key={index}>
                     <td className=" text-center">{item.companyName}</td>
                     <td className=" text-center">
-                      {moment(item.interviewDate).format("DD.MM.YYYY")}
+                      {moment(item.interviewDate).format("DD.MM.YYYY.")}
                     </td>
                     <td className=" text-center">{item.status}</td>
                     <td className="text-center">
-                      <p value={index} itemID={index}>
+                      <p>
                         <FontAwesomeIcon
                           icon={faEye}
                           onClick={() =>
@@ -89,7 +90,7 @@ export default function Modals() {
                               item.candidateName,
                               item.companyName,
                               item.status,
-                              moment(item.interviewDate).format("DD.MM.YYYY"),
+                              moment(item.interviewDate).format("DD.MM.YYYY."),
                               item.phase,
                               item.note
                             )
@@ -104,8 +105,8 @@ export default function Modals() {
           })}
         </Table>
         <Modal
+          overlayClassName="overlay"
           className="popup"
-          style={{ background: "red" }}
           isOpen={modalIsOpen}
           onRequestClose={() => setModalIsOpen(false)}
           contentLabel="">

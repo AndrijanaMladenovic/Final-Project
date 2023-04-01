@@ -3,3 +3,7 @@
   font-size: 1.3rem;
   font-weight: 500;
 }
+
+.card:hover {
+  transform: scale(1.05);
+}

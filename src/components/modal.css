@@ -15,41 +15,51 @@
 } */
 
 
-.popup{
-   position: absolute;
+.popup {
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
   padding: 20px;
-  
   align-items: center;
 }
 
-.popUp_container{
+.popUp_container {
   display: flex;
-  align-items: center;
-  gap: 20px;
- 
+  align-items: baseline;
+  gap: 45px;
 }
 
-.name_candidate{
-  text-align: center;
+.popUp_container span {
+  font-size: 1.1rem;
 }
 
-.close_btn{
+.close_btn {
   position: absolute;
   bottom: 90%;
-  left:90%;
+  left: 90%;
   border-radius: 50%;
- background-color: transparent;
- border: 1px solid white;
- width: 50px;
- height: 50px;
- background-color: rgb(114,114,114);
+  background-color: transparent;
+  border: 1px solid white;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(114, 114, 114);
+  top: 5%;
 }
 
-.icon{
+.icon {
   color: white;
   font-size: 24px;
-  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+

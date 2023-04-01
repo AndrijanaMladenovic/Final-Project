@@ -39,7 +39,7 @@ export default function CandidateReports() {
           <div className="first_row">
             <div className="name">
               <span>Date of birth:</span>
-              <p className="p-candidates">{moment(items.birthday).format("MM-DD-YYYY")}</p>
+              <p className="p-candidates">{moment(items.birthday).format("MM.DD.YYYY.")}</p>
             </div>
             <div className="birth">
               <span> Education</span>
