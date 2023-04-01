@@ -11,14 +11,15 @@ export default function CandidateReports() {
   const { id } = useParams();
   const [items, setItems] = useState();
 
-  const getData = async () => {
+  const getData = async()=>{
     const data = await getCandidateReport(id);
     setItems(data);
-  };
-
+  }
   useEffect(() => {
-    getData();
-  }, [id]);
+   getData();
+    
+  }, [id])
+  
 
   if (items) {
     return (
@@ -28,21 +29,21 @@ export default function CandidateReports() {
           <div className="first_row ">
             <div className="name">
               <span>Name:</span>
-              <p>{items.name}</p>
+              <p className="p-candidates">{items.name}</p>
             </div>
             <div className="birth">
               <span> Email :</span>
-              <p>{items.email}</p>
+              <p className="p-candidates">{items.email}</p>
             </div>
           </div>
           <div className="first_row">
             <div className="name">
               <span>Date of birth:</span>
-              <p>{moment(items.birthday).format("MM-DD-YYYY")}</p>
+              <p className="p-candidates">{moment(items.birthday).format("MM-DD-YYYY")}</p>
             </div>
             <div className="birth">
               <span> Education</span>
-              <p>{items.education}</p>
+              <p className="p-candidates">{items.education}</p>
             </div>
           </div>
         </Container>
