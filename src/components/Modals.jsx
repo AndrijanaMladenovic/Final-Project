@@ -3,7 +3,7 @@ import axios from "axios";
 import Table from "react-bootstrap/Table";
 import { useParams } from "react-router";
 import moment from "moment";
-
+import { getPopUp } from "./data/data";
 import Modal from "react-modal";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose, faEye } from "@fortawesome/free-solid-svg-icons";
@@ -15,14 +15,13 @@ export default function Modals() {
   const [modalContent, setModalContent] = useState("");
 
   const [items, setItems] = useState();
-  const url = `http://localhost:3333/api/reports?candidateId=${id}`;
+  const getReports = async () => {
+    const data = await getPopUp(id);
+    setItems(data);
+  };
   useEffect(() => {
-    const reports = async () => {
-      const res = await axios.get(url);
-      setItems(res.data);
-    };
-    reports();
-  }, [url]);
+    getReports();
+  }, [id]);
 
   const popUp = (
     candidateName,
@@ -59,7 +58,7 @@ export default function Modals() {
 
   if (items) {
     return (
-      <>
+      <div className="m-5">
         <Table striped bordered hover variant="primary">
           <thead>
             <tr>
@@ -115,7 +114,7 @@ export default function Modals() {
             <FontAwesomeIcon className="icon" icon={faClose} />
           </button>
         </Modal>
-      </>
+      </div>
     );
   }
 }

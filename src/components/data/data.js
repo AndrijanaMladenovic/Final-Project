@@ -11,3 +11,9 @@ export const getCandidateReport = async (id) => {
   const res = await axios.get(`http://localhost:3333/api/candidates/${id}`);
   return res.data;
 };
+export const getPopUp = async (id) => {
+  const res = await axios.get(
+    `http://localhost:3333/api/reports?candidateId=${id}`
+  );
+  return res.data;
+};

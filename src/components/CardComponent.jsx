@@ -19,24 +19,21 @@ const CardComponent = ({ data }) => {
         <div>
           <h1 className="p-3">Candidates</h1>
         </div>
-        <div className="p-3 d-flex">
-          <span
-            className="input-group-text border-end-0 bg-white rounded-0"
-            id="search-addon">
+
+        <label htmlFor="input-field" className="input-label p-4 d-flex">
+          <i className="icon-class ps-3">
             <FontAwesomeIcon className="search-icon" icon={faSearch} />
-          </span>
+          </i>
           <input
             type="search"
             value={query}
             onChange={(e) => {
               setQuery(e.target.value);
             }}
-            className="form-control border-start-0 border rounded-0"
+            className="form-control border-start-1 border rounded-0 ps-5"
             placeholder="Search Users"
-            aria-label="Search"
-            aria-describedby="search-addon"
           />
-        </div>
+        </label>
       </div>
 
       <hr style={{ width: "84%", margin: "0 auto" }} />

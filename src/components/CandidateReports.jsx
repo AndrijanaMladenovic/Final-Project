@@ -11,22 +11,20 @@ export default function CandidateReports() {
   const { id } = useParams();
   const [items, setItems] = useState();
 
-  const getData = async()=>{
+  const getData = async () => {
     const data = await getCandidateReport(id);
     setItems(data);
-  }
+  };
   useEffect(() => {
-   getData();
-    
-  }, [id])
-  
+    getData();
+  }, [id]);
 
   if (items) {
     return (
       <>
-        <Container className="container">
-          <Image style={{ width: "18rem" }} fluid src={items.avatar}></Image>
-          <div className="first_row ">
+        <Container className="container d-flex  flex-sm-column flex-lg-row  align-items-center justify-content-center mt-5">
+          <Image style={{ width: "15rem" }} fluid src={items.avatar}></Image>
+          <div className="p-4">
             <div className="name">
               <span>Name:</span>
               <p className="p-candidates">{items.name}</p>
@@ -36,13 +34,15 @@ export default function CandidateReports() {
               <p className="p-candidates">{items.email}</p>
             </div>
           </div>
-          <div className="first_row">
+          <div className="p-4">
             <div className="name">
               <span>Date of birth:</span>
-              <p className="p-candidates">{moment(items.birthday).format("MM.DD.YYYY.")}</p>
+              <p className="p-candidates">
+                {moment(items.birthday).format("MM.DD.YYYY.")}
+              </p>
             </div>
             <div className="birth">
-              <span> Education</span>
+              <span> Education :</span>
               <p className="p-candidates">{items.education}</p>
             </div>
           </div>

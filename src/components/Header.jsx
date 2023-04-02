@@ -9,7 +9,7 @@ export const Header = () => {
         </Link>
       </div>
       <div>
-        <button className="btn btn-outline-light text-light">Candidates</button>
+        <button className="btn btn-outline-light">Candidates</button>
       </div>
     </nav>
   );
