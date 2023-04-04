@@ -30,7 +30,7 @@ export default function CandidateReports() {
               <p className="p-candidates">{items.name}</p>
             </div>
             <div className="birth">
-              <span> Email :</span>
+              <span> Email:</span>
               <p className="p-candidates">{items.email}</p>
             </div>
           </div>
@@ -42,7 +42,7 @@ export default function CandidateReports() {
               </p>
             </div>
             <div className="birth">
-              <span> Education :</span>
+              <span> Education:</span>
               <p className="p-candidates">{items.education}</p>
             </div>
           </div>

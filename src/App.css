@@ -37,4 +37,7 @@
   
 }
 
-
+footer {
+  position: absolute;
+  top: 100%;
+}

@@ -1,5 +1,4 @@
 import { React, useEffect, useState } from "react";
-import axios from "axios";
 import Table from "react-bootstrap/Table";
 import { useParams } from "react-router";
 import moment from "moment";
@@ -72,16 +71,15 @@ export default function Modals() {
 
           {items.map((item, index) => {
             return (
-              <>
-                <tbody key={index}>
-                  <tr>
-                    <td className=" text-center">{item.companyName}</td>
-                    <td className=" text-center">
+                <tbody key={`tb- ${index}`}>
+                  <tr key={`tr- ${index}`}>
+                    <td key={`td1- ${index}`} className=" text-center">{item.companyName}</td>
+                    <td key={`td2- ${index}`} className=" text-center">
                       {moment(item.interviewDate).format("DD.MM.YYYY.")}
                     </td>
-                    <td className=" text-center">{item.status}</td>
-                    <td className="text-center">
-                      <p>
+                    <td key={`td3- ${index}`} className=" text-center">{item.status}</td>
+                    <td key={`td4- ${index}`} className="text-center">
+                      <p key={`p- ${index}`}>
                         <FontAwesomeIcon
                           icon={faEye}
                           onClick={() =>
@@ -99,7 +97,6 @@ export default function Modals() {
                     </td>
                   </tr>
                 </tbody>
-              </>
             );
           })}
         </Table>
