@@ -73,8 +73,8 @@ export default function Modals() {
           {items.map((item, index) => {
             return (
               <>
-                <tbody>
-                  <tr key={index}>
+                <tbody key={index}>
+                  <tr>
                     <td className=" text-center">{item.companyName}</td>
                     <td className=" text-center">
                       {moment(item.interviewDate).format("DD.MM.YYYY.")}

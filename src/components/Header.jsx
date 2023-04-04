@@ -9,7 +9,9 @@ export const Header = () => {
         </Link>
       </div>
       <div>
-        <button className="btn btn-outline-light">Candidates</button>
+        <Link to={"/reports"} className="btn btn-outline-light">
+          Admin
+        </Link>
       </div>
     </nav>
   );

@@ -38,7 +38,7 @@ const CardComponent = ({ data }) => {
 
       <hr style={{ width: "84%", margin: "0 auto" }} />
 
-      <main className="container-fluid justify-content-center text-center d-flex flex-wrap pt-2">
+      <main className="container-fluid justify-content-center text-center d-flex flex-wrap p-4">
         {data
           ? filteredItems.map((item, index) => {
               return (
