@@ -14,10 +14,10 @@ const CardComponent = ({ data }) => {
   return (
     <>
       <div
-        className="d-flex justify-content-between align-items-center"
+        className="d-flex justify-content-between align-items-center candidates-search"
         style={{ padding: "0 7%" }}>
         <div>
-          <h3 className="p-3">Candidates</h3>
+          <h3 className="candidates-title">Candidates</h3>
         </div>
 
         <label htmlFor="input-field" className="input-label p-4 d-flex">
@@ -38,12 +38,12 @@ const CardComponent = ({ data }) => {
 
       <hr style={{ width: "84%", margin: "0 auto" }} />
 
-      <main className="container-fluid justify-content-center text-center d-flex flex-wrap p-4 gap-3">
+      <main className="container-fluid justify-content-center text-center d-flex flex-wrap p-4 gap-3 mb-5">
         {data
           ? filteredItems.map((item, index) => {
               return (
                 <Card
-                  className="col-lg-2 col-md-4 col-sm-8 col-xs-8 border-primary shadow"
+                  className="col-lg-2 col-md-4 col-sm-8 col-10 border-primary shadow"
                   key={index}>
                   <Card.Img
                     className="pe-4 ps-4 pt-4"

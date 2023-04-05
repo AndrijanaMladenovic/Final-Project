@@ -57,7 +57,9 @@ export default function Modals() {
 
   if (items) {
     return (
-      <div className="m-5">
+      
+      <div className="reports-table">
+        <h2 className="pb-2">Reports</h2>
         <Table striped bordered hover variant="primary">
           <thead>
             <tr>

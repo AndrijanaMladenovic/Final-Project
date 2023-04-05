@@ -8,7 +8,7 @@ import CandidateReports from "./components/CandidateReports";
 import Modals from "./components/Modals";
 import Modal from "react-modal";
 import ReportPage from "./components/Admin/CreateReport/ReportPage";
-import React, { useState } from "react";
+import React from "react";
 import AllReports from "./components/Admin/Reports/AllReports";
 import HeaderForReports from "./components/Admin/Reports/HeaderForReports";
 Modal.setAppElement("#root");

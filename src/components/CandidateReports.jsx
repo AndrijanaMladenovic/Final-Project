@@ -22,9 +22,9 @@ export default function CandidateReports() {
   if (items) {
     return (
       <>
-        <Container className="container d-flex  flex-sm-column flex-lg-row  align-items-center justify-content-center mt-5">
-          <Image style={{ width: "15rem" }} fluid src={items.avatar}></Image>
-          <div className="p-4">
+        <Container className="container d-flex int-report align-items-center justify-content-center mt-5 gap-3">
+          <Image style={{ width: "15rem" }} fluid src={items.avatar} className="reports-image"></Image>
+          <div className="report-center p-2">
             <div className="name">
               <span>Name:</span>
               <p className="p-candidates">{items.name}</p>
@@ -34,7 +34,7 @@ export default function CandidateReports() {
               <p className="p-candidates">{items.email}</p>
             </div>
           </div>
-          <div className="p-4">
+          <div className="report-center p-2">
             <div className="name">
               <span>Date of birth:</span>
               <p className="p-candidates">
