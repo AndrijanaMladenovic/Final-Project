@@ -23,6 +23,7 @@ function App() {
             <>
               <Header />
               <Main />
+              <Footer />
             </>
           }
         />
@@ -30,7 +31,7 @@ function App() {
           path="/:id"
           element={
             <>
-              <Header /> <CandidateReports /> <Modals />
+              <Header /> <CandidateReports /> <Modals /> <Footer />
             </>
           }
         />
@@ -53,7 +54,6 @@ function App() {
           }
         />
       </Routes>
-      <Footer />
     </>
   );
 }

@@ -67,7 +67,10 @@
   }
 }
 
-.navbar {
-  padding-left: 8%;
-  padding-right: 8%;
+
+footer{
+  
+  top: 100%;
+  width: 100%;
+
 }
